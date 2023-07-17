@@ -22,7 +22,7 @@ let score = 0;
 
 //Funcion que dispare la pregunta inicial
 function ask_question(question) {
-    let user_answer = prompt(question.pregunta + " " + question.options)
+    let user_answer = parseInt(prompt(question.pregunta + " " + question.options))
     if(parseInt(user_answer) === question.answer){
         score++;
         alert("Respuesta Correcta!! Muy bien 10")
@@ -35,6 +35,6 @@ preguntas.forEach(function(question) {
     ask_question(question);
 })
 //Puntuacion Final
-alert("¡Cuestionario resuelto de forma exitosa!" + "Tu puntuación final es de " + score + "/" + question.length)
+alert("¡Cuestionario resuelto de forma exitosa!" + "Tu puntuación final es de " + score + "/" + preguntas.length)
 
 //pq no me da rta correcta
