@@ -23,7 +23,7 @@ let score = 0;
 //Funcion que dispare la pregunta inicial
 function ask_question(question) {
     let user_answer = prompt(question.pregunta + " " + question.options)
-    if (user_answer.toLocaleLowerCase === question.options[parseInt(question.answer)].toLocaleLowerCase) {
+    if (user_answer === question.options[parseInt(question.answer)]) {
         score++;
         alert("Respuesta Correcta!! Muy bien 10")
     
