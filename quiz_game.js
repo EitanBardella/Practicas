@@ -22,12 +22,12 @@ let score = 0;
 
 //Funcion que dispare la pregunta inicial
 function ask_question(question) {
-    let user_answer = parseInt(prompt(question.pregunta + " " + question.options))
-    if(parseInt(user_answer) === question.answer){
+    let user_answer = prompt(question.pregunta + " " + question.options)
+    if (question.indexOf(parseInt(user_answer)) === question.answer) {
         score++;
         alert("Respuesta Correcta!! Muy bien 10")
     } else {
-        alert("Respuesta Incorrecta!! Falta estudio")
+        alert ("Respuesta Incorrecta!! Falta Estudio")
     }
 }
 //iterador entre preguntas
@@ -37,4 +37,4 @@ preguntas.forEach(function(question) {
 //Puntuacion Final
 alert("¡Cuestionario resuelto de forma exitosa!" + "Tu puntuación final es de " + score + "/" + preguntas.length)
 
-//pq no me da rta correcta
+//pq no me da rta correcta parseInt(user_answer) === question.answer
